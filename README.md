@@ -7,7 +7,7 @@
 ## Run (dev, hot reload)
 
 ```bash
-cp .env.sample .env        # fill in DATABASE_URL
+cp app/.env.sample app/.env      # fill in DATABASE_URL
 docker compose up --build
 docker compose exec app npm run db:init   # create tables, sample data, admin user (first time)
 ```
