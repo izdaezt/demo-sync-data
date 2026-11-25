@@ -12,7 +12,7 @@ if (process.env.NODE_ENV === 'production' && fs.existsSync(clientDir)) {
   app.get('*', (_req, res) => res.sendFile(path.join(clientDir, 'index.html')));
 } else {
   // Dev: UI is served by Vite on :5173, so the API root just reports its version
-  app.get('/', (_req, res) => res.json({ message: 'Version 1.0.0' }));
+  app.get('/', (_req, res) => res.json({name: 'Demo Sync Data', message: 'Version 1.0.0' }));
 }
 
 process.on('unhandledRejection', (e) => console.error('unhandledRejection', e));
