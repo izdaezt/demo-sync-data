@@ -221,3 +221,11 @@ __marimo__/
 
 # Streamlit
 .streamlit/secrets.toml
+
+# Node
+node_modules/
+.env.*
+!.env.sample
+.DS_Store
+
+.vercel

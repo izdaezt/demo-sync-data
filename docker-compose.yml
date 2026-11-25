@@ -1,0 +1,17 @@
+services:
+  app:
+    build:
+      context: ./app
+      target: dev
+    env_file: .env
+    environment:
+      NODE_ENV: development
+      PORT: "3000"
+      CHOKIDAR_USEPOLLING: "true"
+    ports:
+      - "5173:5173" # UI (Vite, hot reload)
+      - "3000:3000" # API
+    volumes:
+      - ./app:/usr/src/app
+      - ./database:/usr/src/database
+      - /usr/src/app/node_modules

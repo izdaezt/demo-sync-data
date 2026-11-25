@@ -1,0 +1,12 @@
+# Production-like run: one image serving API + built UI on :3000
+services:
+  app:
+    build:
+      context: ./app
+      target: prod
+    env_file: .env
+    environment:
+      NODE_ENV: production
+      PORT: "3000"
+    ports:
+      - "3000:3000"
